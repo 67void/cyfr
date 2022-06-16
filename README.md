@@ -3,67 +3,42 @@
 ---
 ## ciphers used:
 
-> A - caesar cipher and the variations (substituiton of letters by n number of letters up or down)
+> A - Caesar [replacing letters with offset letters]
 
-> B -
+> B - Numerical [replacing letters with numbers]
 
-> C -
+> C - Pig Latin
 
-> D - 
+> D - Affine
 
-> E - 
+> E - Rail-fence
 
-> F -
+> F - Vigenere
 
-> G -
+> G - Reverse Vigenere
 
-> H - 
+> H - Reverse Rail-fence
 
-> I -
+> I - Reverse Affine
 
-> J -
+> J - Reverse Rail-fence
 
-> K - 
+> K - Reverse Pig Latin
 
-> L - 
+> L - Reverse Numerical
 
-> M -
+> M - Reverse Caesar
 
-> N -
-
-> O -
-
-> P -
-
-> Q -
-
-> R -
-
-> S -
-
-> T - 
-
-> U -
-
-> V - 
-
-> W -
-
-> X - 
-
-> Y - 
-
-> Z - 
 
 ---
-## Key Format:
+## Cyfr Key Format:
 ```
 at the  beginning of output:
 
 wwwxyyyyyZ
 
 www   = output language which its ciphered in [065,010,.--]
-x     = A to Z (which cipher used)            [A-Z]
+x     = A to M (which cipher used)            [A-M]
 yyyyy = additional details                    []
 Z     = proof of sign that its coded on cyfr  [Z]
 
@@ -75,7 +50,22 @@ dd    = date                                  [01-31]
 mm    = month                                 [JA,FE,MA,AP,MY, JU,JY,AU,OC,NO,DE]
 yy    = year                                  [00-99]
 bb    = day                                   [MO,TU,WE,TH,FR,SA,ST]
-xx    = which cipher used            [A-Z]
+xx    = which cipher used            [A-M]
 Z     = proof of sign that its coded on cyfr  [Z]
 ```
 ---
+
+## Cyfr Process:
+> Encoding
+
+    - Enter which language you want output to be in [ASCII, Binary, Morse or English]
+    - Enter which cipher (the actual encoding process) you want to use from the list of ciphers above
+    - Enter your input
+    - Cyfr first ciphers your input then converts to choosen language and puts the Cyfr key.
+
+> Decoding
+
+    - Enter the text which needs to be decoded
+    - Using the Cyfr key, Cyfr automatically knows which ciphers and language to use decode
+    - Cyfr converts from input language to English and then decodes the ciphers.
+    
