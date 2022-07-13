@@ -1,71 +1,49 @@
 # cyfr
 ### a ciphering machine
+
+a cipher (or cypher) is an algorithm for performing encryption or decryption
+
 ---
 ## ciphers used:
 
-> A - Caesar [replacing letters with offset letters]
+> A 1 - Caesar
 
-> B - Numerical [replacing letters with numbers]
+> B 2 - Rail-fence
 
-> C - Pig Latin
+> C 3 - Vigenere
 
-> D - Affine
+> D 4 - Reverse Vigenere
 
-> E - Rail-fence
+> E 5 - Reverse Caesar
 
-> F - Vigenere
+> F  6 - ASCII
 
-> G - Reverse Vigenere
-
-> H - Reverse Rail-fence
-
-> I - Reverse Affine
-
-> J - Reverse Rail-fence
-
-> K - Reverse Pig Latin
-
-> L - Reverse Numerical
-
-> M - Reverse Caesar
-
-
+> G 7 - Morse
 ---
+
 ## Cyfr Key Format:
 ```
 at the  beginning of output:
 
-wwwxyyyyyZ
+xyyyyyZ
 
-www   = output language which its ciphered in [065,010,.--]
-x     = A to M (which cipher used)            [A-M]
-yyyyy = additional details                    []
+x     = A to G (which cipher used)            [A-G]
+yyyyy = additional details (such as key)      []
 Z     = proof of sign that its coded on cyfr  [Z]
 
-at end of output:
-
-ddmmyybbxxZ
-
-dd    = date                                  [01-31]
-mm    = month                                 [JA,FE,MA,AP,MY, JU,JY,AU,OC,NO,DE]
-yy    = year                                  [00-99]
-bb    = day                                   [MO,TU,WE,TH,FR,SA,ST]
-xx    = which cipher used            [A-M]
-Z     = proof of sign that its coded on cyfr  [Z]
 ```
 ---
 
 ## Cyfr Process:
 > Encoding
-
-    - Enter which language you want output to be in [ASCII, Binary, Morse or English]
-    - Enter which cipher (the actual encoding process) you want to use from the list of ciphers above
-    - Enter your input
-    - Cyfr first ciphers your input then converts to choosen language and puts the Cyfr key.
+ 
+    - Enter which cipher (the actual encoding process) you want to use from the list of ciphers above.
+    - Enter your input.
+    - Cyfr ciphers your input puts the Cyfr key at front.
 
 > Decoding
 
-    - Enter the text which needs to be decoded
-    - Using the Cyfr key, Cyfr automatically knows which ciphers and language to use decode
+    - Enter the text which needs to be decoded.
+    - Using the Cyfr key, Cyfr automatically knows which ciphers decode.
     - Cyfr converts from input language to English and then decodes the ciphers.
     
